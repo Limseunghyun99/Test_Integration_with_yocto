@@ -7,5 +7,6 @@ jobs:
       - run:
           name: The First Step
           command: |
+            ls -alh ~
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
