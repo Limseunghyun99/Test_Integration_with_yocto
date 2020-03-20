@@ -1,4 +1,4 @@
-version: 2.1
+ersion: 2.1
 jobs:
   build:
     machine:
@@ -28,6 +28,7 @@ jobs:
             sudo locale-gen --lang en
             sudo dpkg-reconfigure locales
             locale -a |grep en_US
+            sudo apt-get install python3
             echo "Test End"
            
             bitbake core-image-minimal
