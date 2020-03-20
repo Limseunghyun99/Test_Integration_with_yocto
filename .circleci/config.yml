@@ -20,9 +20,9 @@ jobs:
             wait
             ls -alh
             which python
-            
+            sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7        
             python -V
-
+    
 
 
             source poky/oe-init-build-env
