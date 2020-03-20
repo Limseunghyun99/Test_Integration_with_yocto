@@ -17,11 +17,14 @@ jobs:
             sudo rm /usr/bin/python
             export PYTHON=/usr/bin/python2.7
             sudo ln -s /usr/bin/python2 /usr/bin/python
+
             echo $PYTHON
             git clone -b yocto-2.4.3 --depth 1 git://git.yoctoproject.org/poky &
             git clone -b rocko --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
             git clone -b rocko --depth 1 git://git.openembedded.org/meta-openembedded &
             wait
             ls -alh
+            
+            echo $PYTHON
             source poky/oe-init-build-env
             bitbake core-image-minimal
