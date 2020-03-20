@@ -29,8 +29,8 @@ jobs:
             sudo dpkg-reconfigure locales
             locale -a |grep en_US
             
-            ls /usr/bin/python3*
             exprot python3=/usr/bin/python3.7.0
+    
             echo "Test End"
-           
+            pyenv install 3.7.0 
             bitbake core-image-minimal
