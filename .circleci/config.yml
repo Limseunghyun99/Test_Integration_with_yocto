@@ -11,7 +11,7 @@ jobs:
             mkdir build
             ls -alh 
             cd build
-            sudo apt-get install python2.7
+            sudo apt-get install python*
             sudo apt-get install python3-dist*
             sudo apt-get install git
             sudo apt-get update
