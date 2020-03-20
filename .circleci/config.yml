@@ -11,7 +11,7 @@ jobs:
             mkdir build
             ls -alh 
             cd build
-            sudo apt-get install python
+            sudo apt-get install python*
             sudo apt-get install python3-dist*
             sudo apt-get install git
             git clone -b yocto-2.4.3 --depth 1 git://git.yoctoproject.org/poky &
@@ -21,5 +21,3 @@ jobs:
             ls -alh
             source poky/oe-init-build-env
             bitbake core-image-minimal
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
