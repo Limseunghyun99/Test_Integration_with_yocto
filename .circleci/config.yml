@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:2020.01 
+      - image: 3.9.0a4 
     steps:
       - run:
           name: The First Step
