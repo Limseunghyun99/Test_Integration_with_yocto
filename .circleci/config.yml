@@ -20,7 +20,7 @@ jobs:
             wait
             ls -alh
             which python
-            sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7        
+            sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1       
             python -V
     
 
