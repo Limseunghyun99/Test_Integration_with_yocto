@@ -15,6 +15,7 @@ jobs:
             git clone -b rocko --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
             git clone -b rocko --depth 1 git://git.openembedded.org/meta-openembedded &
             wait
+            ls -alh
             source poky/oe-init-build-env
             bitbake core-image-minimal
             echo 'Hello World!'
