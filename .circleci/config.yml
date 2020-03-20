@@ -8,5 +8,8 @@ jobs:
           name: The First Step
           command: |
             ls -alh ~
+            mkdir build
+
+
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
