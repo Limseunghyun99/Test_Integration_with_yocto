@@ -23,12 +23,11 @@ jobs:
             source poky/oe-init-build-env
             echo "Bitbake start"
             echo "Test Start"
-            locale -a 
             sudo locale-gen en_US
             sudo locale-gen en_US.UTF-8
             sudo locale-gen --lang en
             sudo dpkg-reconfigure locales
-            locale -a
+            locale -a |grep en_US
             echo "Test End"
            
             bitbake core-image-minimal
