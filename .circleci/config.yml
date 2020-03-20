@@ -14,10 +14,9 @@ jobs:
             sudo apt-get update
             sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm cpio python python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libssl-dev
             echo "Install finish"
-            export python=/usr/bin/python2.7
-            sudo rm /usr/bin/python
+            export PYTHON=/usr/bin/python2.7
             sudo ln -s /usr/bin/python2 /usr/bin/python
-
+            echo $PYTHON
             git clone -b yocto-2.4.3 --depth 1 git://git.yoctoproject.org/poky &
             git clone -b rocko --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
             git clone -b rocko --depth 1 git://git.openembedded.org/meta-openembedded &
