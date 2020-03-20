@@ -11,7 +11,7 @@ jobs:
             mkdir build
             ls -alh 
             cd build
-            sudo apt-get install python3-dist
+            sudo apt-get install python3-dist*
             sudo apt-get install git
             git clone -b yocto-2.4.3 --depth 1 git://git.yoctoproject.org/poky &
             git clone -b rocko --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
