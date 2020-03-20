@@ -22,5 +22,8 @@ jobs:
     
             source poky/oe-init-build-env
             echo "Bitbake start"
-
+            export LC_ALL="en_US.UTF-8"
+            export LC_CTYPE="en_US.UTF-8"
+            export LANGUAGE="en_US.UTF-8"
+            sudo dpkg-recofnigure locales
             bitbake core-image-minimal
