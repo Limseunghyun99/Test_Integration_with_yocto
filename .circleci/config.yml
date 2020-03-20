@@ -10,20 +10,15 @@ jobs:
             mkdir build
             cd build
             
-            echo "Install start"
             sudo apt-get update
             sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm cpio python3 python3-pip python3-pexpect xz-utils debianutils python iputils-ping libssl-dev
-            echo "Install finish"
             git clone -b yocto-2.4.3 --depth 1 git://git.yoctoproject.org/poky &
             git clone -b rocko --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
             git clone -b rocko --depth 1 git://git.openembedded.org/meta-openembedded &
             wait
-            ls -alh
-            which python
             sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python2.7 1       
-            python -V
     
-
-
             source poky/oe-init-build-env
+            echo "Bitbake start"
+
             bitbake core-image-minimal
