@@ -18,7 +18,7 @@ jobs:
             git clone -b rocko --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
             git clone -b rocko --depth 1 git://git.openembedded.org/meta-openembedded &
             wait
-            sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python2.7 1       
+            # sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python2.7 1       
             sudo apt-get install language-pack-en* 
             source poky/oe-init-build-env
             echo "Bitbake start"
