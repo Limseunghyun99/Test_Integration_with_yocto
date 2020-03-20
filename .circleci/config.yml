@@ -29,7 +29,7 @@ jobs:
             sudo dpkg-reconfigure locales
             locale -a |grep en_US
             
-            sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python333 1       
+            sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python3 1       
             echo "Test End"
            
             bitbake core-image-minimal
