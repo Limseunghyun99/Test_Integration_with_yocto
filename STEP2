@@ -7,8 +7,8 @@ echo $WORK
 cd $WORK
 source poky/oe-init-build-env
 
-#cp $WORK/meta-renesas/meta-rcar-gen3/docs/sample/conf/h3ulcb/poky-gcc/bsp/*.conf ./conf/.
-#cp $WORK/meta-renesas/meta-rcar-gen3/docs/sample/conf/h3ulcb/poky-gcc/gfx-only/*.conf ./conf/.
+cp $WORK/meta-renesas/meta-rcar-gen3/docs/sample/conf/h3ulcb/poky-gcc/bsp/*.conf ./conf/.
+cp $WORK/meta-renesas/meta-rcar-gen3/docs/sample/conf/h3ulcb/poky-gcc/gfx-only/*.conf ./conf/.
 cp $WORK/meta-renesas/meta-rcar-gen3/docs/sample/conf/salvator-x/poky-gcc/mmp/*.conf ./conf/.
 
 cd $WORK/build
