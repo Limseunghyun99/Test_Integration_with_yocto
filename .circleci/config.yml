@@ -20,3 +20,5 @@ jobs:
             which python3
             cat /etc/issue
             ls -alh
+            bash STEP1
+            bash STEP2
