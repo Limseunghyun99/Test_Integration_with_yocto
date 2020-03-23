@@ -1,4 +1,4 @@
-ersion: 2.1
+version: 2.1
 jobs:
   build:
     machine:
@@ -33,4 +33,5 @@ jobs:
     
             echo "Test End"
             pyenv install 3.7.0 
+            pyenv global 3.7.0
             bitbake core-image-minimal
