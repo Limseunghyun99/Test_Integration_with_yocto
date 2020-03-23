@@ -1,37 +1,22 @@
 version: 2.1
 jobs:
   build:
+#    docker:
+#      - image: buildpack-deps:trusty
     machine:
-      image: ubuntu-1604:201903-01 
+      image: ubuntu-1604:201903-01
     steps:
+      - checkout
       - run:
           name: The First Step
           command: |
-            mkdir build
-            cd build
-            
             sudo apt-get update
-            sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm cpio python3 python3-pip python3-pexpect xz-utils debianutils python iputils-ping libssl-dev
-            
+            sudo apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm cpio python python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libssl-dev
             sudo apt-get install locales*
-            git clone -b yocto-2.4.3 --depth 1 git://git.yoctoproject.org/poky &
-            git clone -b rocko --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
-            git clone -b rocko --depth 1 git://git.openembedded.org/meta-openembedded &
-            wait
-            # sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python2.7 1       
-            sudo apt-get install language-pack-en* 
-            source poky/oe-init-build-env
-            echo "Bitbake start"
-            echo "Test Start"
-            sudo locale-gen en_US
-            sudo locale-gen en_US.UTF-8
-            sudo locale-gen --lang en
-            sudo dpkg-reconfigure locales
-            locale -a |grep en_US
-            
-            exprot python3=/usr/bin/python3.7.0
-    
-            echo "Test End"
-            pyenv install 3.7.0 
-            pyenv global 3.7.0
-            bitbake core-image-minimal
+            ls -alh /usr/bin/python*
+            sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+            export PATH=/usr/bin/:$PATH
+            which python
+            which python3
+            cat /etc/issue
+            ls -alh
