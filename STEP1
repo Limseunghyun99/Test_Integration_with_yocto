@@ -11,9 +11,9 @@ YOCTO_VERSION=yocto-2.4.3
 META_VERSION=rocko
 
 # Clone basic Yocto layers in parallel
-#git clone -b $YOCTO_VERSION --depth 1 git://git.yoctoproject.org/poky &
-#git clone -b $META_VERSION --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
-#git clone -b $META_VERSION --depth 1 git://git.openembedded.org/meta-openembedded &
+git clone -b $YOCTO_VERSION --depth 1 git://git.yoctoproject.org/poky &
+git clone -b $META_VERSION --depth 1 git://git.linaro.org/openembedded/meta-linaro.git &
+git clone -b $META_VERSION --depth 1 git://git.openembedded.org/meta-openembedded &
 git clone -b rocko_perseus --depth 1 https://github.com/SKrns/meta-renesas.git &
 
 # Wait for all clone operations
