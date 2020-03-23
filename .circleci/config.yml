@@ -22,3 +22,4 @@ jobs:
             ls -alh
             bash STEP1
             bash STEP2
+            bitbake core-image-minimal
