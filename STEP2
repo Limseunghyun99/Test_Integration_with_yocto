@@ -14,5 +14,3 @@ cp $WORK/meta-renesas/meta-rcar-gen3/docs/sample/conf/salvator-x/poky-gcc/mmp/*.
 cd $WORK/build
 cp conf/local-wayland.conf conf/local.conf
 
-
-bitbake core-image-weston
